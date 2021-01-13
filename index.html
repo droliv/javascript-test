@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Formulário de cadastro</title>
+  </head>
+  <body>
+    <div class="container">
+        <h1>Cadastro</h1>
+        <form>
+            <div class="form-group">
+                <label for="name">Nome</label>
+                <input type="text" class="form-control" id="name">
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="cpf">CPF</label>
+                    <input id="cpf" type="text" data-mask="000.000.000-00"  class="form-control"> 
+                    <span id="cpfResponse"></span>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="phone">Telefone</label>
+                    <input type="text" class="form-control" id="phone" data-mask="(00)00000-0000">
+                    <span id="phoneResponse"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email">
+                <span id="mailResponse"></span>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="cnh">Habilitação</label>
+                    <select id="cnh" class="form-control">
+                        <option selected>opções...</option>
+                        <option value="1">Sim</option>
+                        <option value="2">Não</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-6 d-none" id="categoryLabel">
+                    <label for="category">Categoria</label>
+                    <input type="text" class="form-control" id="category">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="language">Lingua estrangeira</label>
+                <select id="language" class="form-control" multiple>
+                    <option selected>Ctrl + click options</option>
+                    <option value="1">Inglês</option>
+                    <option value="2">Espanhol</option>
+                    <option value="3">Francês</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                <label for="uf">Estado</label>
+                <select id="uf" class="form-control">
+                    <option selected>opções...</option>
+                </select>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="city">Cidade</label>
+                    <select id="city" class="form-control" disabled>
+                        <option selected>opções...</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="cep">CEP</label>
+                    <input type="text" class="form-control" id="cep">
+                    <span id="cepResponse"></span>
+                </div>
+                <div class="form-group col-md-8">
+                    <label for="logradouro">Logradouro</label>
+                    <input type="text" class="form-control" id="logradouro" disabled>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="number">Número</label>
+                    <input type="text" class="form-control" id="number" disabled>
+                </div>
+                <div class="form-group col-md-8">
+                    <label for="complement">Complemento</label>
+                    <input type="text" class="form-control" id="complement" disabled>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-8">
+                    <label for="role">Cargo</label>
+                    <select id="role" class="form-control">
+                        <option selected>opções...</option>
+                        <option value="1">Programador 1</option>
+                        <option value="2">Programador 2</option>
+                        <option value="3">Analista 1</option>
+                        <option value="4">Analista 1</option>
+                        <option value="5">Gerente de TI</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="salary">Salário</label>
+                    <input type="text" class="form-control" id="salary">
+                    <span id="salaryResponse"></span>
+                </div>
+            </div>
+        </form>
+        
+        <div>
+            <h2>Tabela de horários de trabalho</h2>
+            <div id="tabela"></div>
+           
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <script src="js/index.js"></script>
+    <script src="js/validEmail.js"></script>
+    <script src="js/validCpf.js"></script>
+    <script src="js/validTel.js"></script>
+    <script src="js/validCep.js"></script>
+    <script src="js/validSalary.js"></script>
+    <script src="js/calcWorkHours.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
